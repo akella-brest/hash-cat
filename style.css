@@ -1,0 +1,348 @@
+@import './fonts.css';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #F6FBFF;
+  font-family: Raleway-Black;
+}
+
+body {
+  padding: 30px 0;
+}
+
+.ellipse {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.header-container .header-logo-text-container {
+  display: flex;
+  align-items: center;
+}
+.header-container .header-logo-text-container .header-text {
+  color: #0A449B;
+  font-size: 1.5em;
+  font-weight: 900;
+  padding-left: 15px;
+}
+.header-container .header-contact-us {
+  display: flex;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 37px 30px #D6E4F0;
+  border-radius: 40px;
+}
+.header-container .header-contact-us .header-contact-us-text {
+  display: none;
+}
+.header-container .header-contact-us img {
+  width: 24px;
+}
+
+.main-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  margin-top: 90px;
+  color: #2F2F2F;
+  position: relative;
+}
+.main-information-container .main-information-green-ellipse {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(219.89deg, #2CDBA6 16.2%, #2CBCDB 86.96%);
+  left: -45px;
+  top: 45px;
+}
+.main-information-container .main-information-orange-ellipse {
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(219.89deg, #FFBD59 16.2%, #FF5A6D 86.96%);
+  left: calc(100% - 9px);
+  top: 333px;
+}
+.main-information-container .main-information-title {
+  color: #7B65FF;
+  font-size: 3em;
+  font-weight: 900;
+  padding-bottom: 6px;
+}
+.main-information-container .main-information-dash {
+  background-color: #7B65FF;
+  width: 42px;
+  height: 8px;
+  border-radius: 22px;
+}
+.main-information-container .main-information-subtitle {
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 38px;
+  font-family: Raleway-ExtraBold;
+  margin: 50px 0 25px 0;
+}
+.main-information-container .main-information-description {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  font-family: Raleway-Regular;
+}
+.main-information-container .main-information-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: #FFBD59;
+  box-shadow: 0px 37px 30px #D6E4F0;
+  border-radius: 47px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 50px auto;
+}
+.main-information-container .main-information-action-button .main-information-action-button-text {
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 10px;
+  font-family: Raleway-ExtraBold;
+}
+.main-information-container .main-information-photo {
+  width: 100vw;
+  background: url(assets/img/ellipse.svg) no-repeat center;
+}
+
+.advantages-container {
+  margin: 70px 20px;
+}
+.advantages-container .advantages-title {
+  color: #7B65FF;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.advantages-container .advantage-item {
+  margin: 50px 0;
+}
+.advantages-container .advantage-item .advantage-item-title {
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 36px;
+  color: #0A449B;
+  margin-bottom: 15px;
+}
+.advantages-container .advantage-item .advantage-item-description {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: Raleway-Regular;
+}
+.advantages-container .advantage-item .advantage-item-img {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.advantages-container .advantage-item .advantage-item-img img {
+  width: 40px;
+}
+.advantages-container .advantage-item .advantage-item-green {
+  background-color: #2CDBA6;
+  box-shadow: 20px 20px 50px rgba(44, 219, 166, 0.35);
+}
+.advantages-container .advantage-item .advantage-item-red {
+  background-color: #FF6359;
+  box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
+}
+.advantages-container .advantage-item .advantage-item-purple {
+  background-color: #7B65FF;
+  box-shadow: 20px 20px 50px rgba(123, 101, 255, 0.35);
+}
+
+.extra-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 20px;
+}
+.extra-information-container .extra-information-green-ellipse {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(219.89deg, #2CDBA6 16.2%, #2CBCDB 86.96%);
+  left: -38px;
+  top: 425px;
+}
+.extra-information-container .extra-information-orange-ellipse {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(219.89deg, #FFBD59 16.2%, #FF5A6D 86.96%);
+  left: 178px;
+  top: 445px;
+  z-index: 1;
+}
+.extra-information-container .extra-information-red-ellipse {
+  width: 57px;
+  height: 57px;
+  background: #FF6359;
+  box-shadow: 14.2824px 14.2824px 35.7061px rgba(255, 99, 89, 0.35);
+  left: 78px;
+  top: 768px;
+  z-index: 1;
+}
+.extra-information-container .extra-information-red-ellipse-two {
+  width: 80px;
+  height: 80px;
+  background: #FF6359;
+  box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
+  left: 226px;
+  top: 393px;
+  z-index: 1;
+}
+.extra-information-container .extra-information-green-ellipse-two {
+  width: 43px;
+  height: 43px;
+  background: linear-gradient(219.89deg, #2CDBA6 16.2%, #2CBCDB 86.96%);
+  left: 47px;
+  top: 612px;
+  z-index: 1;
+}
+.extra-information-container .extra-information-title {
+  color: #7B65FF;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.extra-information-container .extra-information-description {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  font-family: Raleway-Light;
+}
+.extra-information-container .extra-information-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: #FFBD59;
+  box-shadow: 0px 37px 30px #D6E4F0;
+  border-radius: 47px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 30px 0 50px 0;
+}
+.extra-information-container .extra-information-action-button .extra-information-action-button-text {
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 10px;
+  font-family: Raleway-ExtraBold;
+}
+.extra-information-container .extra-information-photo {
+  display: flex;
+  justify-content: center;
+  background: url(assets/img/triangle.svg) -125px -12px no-repeat;
+  width: 100vw;
+  margin-bottom: 80px;
+}
+.extra-information-container .extra-information-photo:last-child {
+  background: url(assets/img/triangle-bottom.svg) 50% 115px no-repeat;
+}
+.extra-information-container .extra-information-photo img {
+  position: relative;
+  z-index: 5;
+}
+
+.pre-footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: url(assets/img/mask.svg);
+  background-color: #7B65FF;
+  border-radius: 54px;
+  padding: 120px 20px;
+  margin: 0 20px 75px 20px;
+}
+.pre-footer-container .pre-footer-red-ellipse {
+  width: 80px;
+  height: 80px;
+  background: #FF6359;
+  box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
+  top: 26px;
+  left: -60px;
+}
+.pre-footer-container .pre-footer-orange-ellipse {
+  width: 190px;
+  height: 190px;
+  background: linear-gradient(219.89deg, #FFBD59 16.2%, #FF5A6D 86.96%);
+  top: -95px;
+  left: 266px;
+}
+.pre-footer-container .pre-footer-green-ellipse {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(219.89deg, #5DFECD 16.2%, #2CBCDB 86.96%);
+  bottom: 24px;
+  left: -33px;
+}
+.pre-footer-container .pre-footer-red-two-ellipse {
+  width: 29px;
+  height: 29px;
+  background: #FF6359;
+  box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
+  bottom: 75px;
+  left: 320px;
+}
+.pre-footer-container .pre-footer-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Raleway-Black;
+}
+.pre-footer-container .pre-footer-description {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  font-family: Raleway-Light;
+  color: #ffffff;
+}
+.pre-footer-container .pre-footer-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: #FFBD59;
+  box-shadow: 0px 37px 30px #604BD8;
+  border-radius: 47px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 30px 0 50px 0;
+}
+.pre-footer-container .pre-footer-action-button .pre-footer-action-button-text {
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 10px;
+  font-family: Raleway-ExtraBold;
+}
+
+/*# sourceMappingURL=style.css.map */

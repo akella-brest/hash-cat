@@ -1,0 +1,27 @@
+@mixin action-button($shadow-color: $shadow-light-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 60px;
+
+    background-color: $orange-color;
+    box-shadow: 0px 37px 30px $shadow-color;
+    border-radius: 47px;
+    color: $white-color;
+    text-decoration: none;
+}
+
+@mixin action-button-text {
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 10px;
+    font-family: Raleway-ExtraBold;
+}
+
+@mixin title($color: $purple-color) {
+    color: $color;
+    font-size: 30px;
+    font-weight: 900;
+}
