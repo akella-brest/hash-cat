@@ -11,7 +11,7 @@
     <!-- Header -->
     <section class="header-container">
         <div class="header-logo-text-container">
-            <img class="header-logo" src="assets/img/logo.svg" alt="logo">
+            <img class="header-logo" src="assets/img/logo-cat.svg" alt="logo">
             <span class="header-text">
                 HashCat
             </span>
@@ -25,11 +25,13 @@
     <!-- Main information -->
     <section class="main-information-container">
         <div class="main-information-green-ellipse ellipse"></div>
-        <div>
+        <div class="main-information-purple-ellipse ellipse"></div>
+        <div class="main-information-green-two-ellipse ellipse"></div>
+        <div class="main-information-text-block">
             <div class="main-information-title">
                 HashCat
+                <span class="main-information-dash"></span>
             </div>
-            <span class="main-information-dash"></span>
             <div class="main-information-subtitle">
                 Looking for ways to reach a wider audience?
             </div>
@@ -55,37 +57,54 @@
             Easily generate hashtags from Photo!
         </header>
 
-        <div class="advantage-item">
-            <div class="advantage-item-img advantage-item-green">
-                <img src="./assets/img/add-photo-icon.svg" alt="add-photo-icon">
+        <div class="advantages-items">
+            <div class="advantage-item">
+                <div class="advantage-item-images">
+                    <div class="advantage-item-img advantage-item-green">
+                        <img src="./assets/img/add-photo-icon.svg" alt="add-photo-icon">
+                    </div>
+                    <div class="advantage-item-arrow">
+                        <img src="./assets/img/arrow-one.svg" alt="arrow-icon">
+                    </div>
+                </div>
+                <div class="advantage-item-title">
+                    Upload a photo or enter base Hashtags
+                </div>
+                <div class="advantage-item-description">
+                    Just upload your photo or enter hashtags that best describe your post or business, like #travel or #nycstores.
+                </div>
             </div>
-            <div class="advantage-item-title">
-                Upload a photo or enter base Hashtags
+            <div class="advantage-item">
+                <div class="advantage-item-images">
+                    <div class="advantage-item-img advantage-item-red">
+                        <img src="./assets/img/hashtag-icon.svg" alt="hashtag-icon">
+                    </div>
+                    <div class="advantage-item-arrow">
+                        <img src="./assets/img/arrow-two.svg" alt="arrow-icon">
+                    </div>
+                </div>
+                <div class="advantage-item-title">
+                    Generate the best Hashtags group 
+                </div>
+                <div class="advantage-item-description">
+                    Our AI-algorithm will recognize the objects on the photo and suggest relevant Hashtags with the broadest audience coverage.
+                </div>
             </div>
-            <div class="advantage-item-description">
-                Just upload your photo or enter hashtags that best describe your post or business, like #travel or #nycstores.
-            </div>
-        </div>
-        <div class="advantage-item">
-            <div class="advantage-item-img advantage-item-red">
-                <img src="./assets/img/hashtag-icon.svg" alt="hashtag-icon">
-            </div>
-            <div class="advantage-item-title">
-                Generate the best Hashtags group 
-            </div>
-            <div class="advantage-item-description">
-                Our AI-algorithm will recognize the objects on the photo and suggest relevant Hashtags with the broadest audience coverage.
-            </div>
-        </div>
-        <div class="advantage-item">
-            <div class="advantage-item-img advantage-item-purple">
-                <img src="./assets/img/file-icon.svg" alt="file-icon">
-            </div>
-            <div class="advantage-item-title">
-                Copy Hashtags to your post
-            </div>
-            <div class="advantage-item-description">
-                Simply copy these Hashtags to your social media post and wait for new views, likes, comments and followers! 
+            <div class="advantage-item">
+                <div class="advantage-item-images">
+                    <div class="advantage-item-img advantage-item-purple">
+                        <img src="./assets/img/file-icon.svg" alt="file-icon">
+                    </div>
+                    <div class="advantage-item-arrow">
+                        <img src="./assets/img/arrow-three.svg" alt="arrow-icon">
+                    </div>
+                </div>
+                <div class="advantage-item-title">
+                    Copy Hashtags to your post
+                </div>
+                <div class="advantage-item-description">
+                    Simply copy these Hashtags to your social media post and wait for new views, likes, comments and followers! 
+                </div>
             </div>
         </div>
     </section>
@@ -93,46 +112,53 @@
     <!-- Extra information block 1 -->
     <section class="extra-information-container">
         <div class="extra-information-green-ellipse ellipse"></div>
-        <header class="extra-information-title">
-            Track your account growth
-        </header>
-        <div class="extra-information-description">
-            Easily measure the impact of our Hashtags: additional likes, comments and followers we brought to your account!
-            Explore the dynamics of your account in Overtime Analytics.
+        <div class="extra-information-purple-ellipse ellipse"></div>
+        <div class="extra-information-text-block">
+            <header class="extra-information-title">
+                Track your account growth
+            </header>
+            <div class="extra-information-description">
+                Easily measure the impact of our Hashtags: additional likes, comments and followers we brought to your account!
+                Explore the dynamics of your account in Overtime Analytics.
+            </div>
+            <a href="#" class="extra-information-action-button">
+                <img src="assets/img/apple.svg" alt="apple">
+                <span class="extra-information-action-button-text">
+                    Install App
+                </span>
+            </a>
         </div>
-        <a href="#" class="extra-information-action-button">
-            <img src="assets/img/apple.svg" alt="apple">
-            <span class="extra-information-action-button-text">
-                Install App
-            </span>
-        </a>
         <div class="extra-information-photo">
             <img class="extra-information-photo-phones" src="assets/img/phones.svg" alt="phones">
+            <img class="extra-information-photo-phones extra-information-photo-phones-big" src="assets/img/phones-big.svg" alt="phones">
         </div>
         <div class="extra-information-orange-ellipse ellipse"></div>
         <div class="extra-information-red-ellipse ellipse"></div>
     </section>
 
     <!-- Extra information block 2 -->
-    <div class="extra-information-container">
-        <header class="extra-information-title">
-            Engage your audience with Captions!
-        </header>
-        <div class="extra-information-description">
-            Don’t know what to write under your post? Explore our database of 100,000 funny Captions.
+    <section class="extra-information-container extra-information-container-reverse">
+        <div class="extra-information-text-block">
+            <header class="extra-information-title">
+                Engage your audience with Captions!
+            </header>
+            <div class="extra-information-description">
+                Don’t know what to write under your post? Explore our database of 100,000 funny Captions.
+            </div>
+            <a href="#" class="extra-information-action-button">
+                <img src="assets/img/apple.svg" alt="apple">
+                <span class="extra-information-action-button-text">
+                    Install App
+                </span>
+            </a>
         </div>
-        <a href="#" class="extra-information-action-button">
-            <img src="assets/img/apple.svg" alt="apple">
-            <span class="extra-information-action-button-text">
-                Install App
-            </span>
-        </a>
         <div class="extra-information-red-ellipse-two ellipse"></div>
         <div class="extra-information-green-ellipse-two ellipse"></div>
         <div class="extra-information-photo">
             <img class="extra-information-photo-phone" src="assets/img/phone.svg" alt="phone">
+            <img class="extra-information-photo-phone extra-information-photo-phone-big" src="assets/img/phone-big.svg" alt="phone">
         </div>
-    </div>
+    </section>
 
     <!-- Pre-Footer block -->
     <section class="pre-footer-container">
@@ -140,6 +166,7 @@
         <div class="pre-footer-orange-ellipse ellipse"></div>
         <div class="pre-footer-green-ellipse ellipse"></div>
         <div class="pre-footer-red-two-ellipse ellipse"></div>
+        <div class="pre-footer-green-two-ellipse ellipse"></div>
         <header class="pre-footer-title">
             Improve your metrics. 10,000+ Influencers can’t be wrong!
         </header>
@@ -155,14 +182,15 @@
     </section>
 
     <!-- Footer -->
-    <section class="header-container">
-        <div class="header-logo-text-container">
-            <img class="header-logo" src="assets/img/logo.svg" alt="logo">
-            <span class="header-text">
+    <section class="footer-container">
+        <div class="footer-logo-text-container">
+            <img class="footer-logo" src="assets/img/logo-cat.svg" alt="logo">
+            <span class="footer-text">
                 HashCat
             </span>
         </div>
-        <div class="header-contact-us">
+        <div class="footer-contact-us">
+            <span class="footer-contact-us-text">Contact Us</span>
             <img src="assets/img/contact-us-logo.svg" alt="contact-us-logo">
         </div>
     </section>

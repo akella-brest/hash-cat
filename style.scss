@@ -23,24 +23,24 @@ body {
     position: absolute;
 }
 
-.header-container {
+.header-container, .footer-container {
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
 
-    .header-logo-text-container {
+    .header-logo-text-container, .footer-logo-text-container {
         display: flex;
         align-items: center;
 
-        .header-text {
+        .header-text, .footer-text {
             color: $dark-blue-color;
             font-size: 1.5em;
             font-weight: 900;
-            padding-left: 15px;
+            padding-left: 5px;
         }
     }
     
-    .header-contact-us {
+    .header-contact-us, .footer-contact-us {
         display: flex;
         justify-content: center;
         width: 46px;
@@ -49,7 +49,7 @@ body {
         box-shadow: 0px 37px 30px $shadow-light-color;
         border-radius: 40px;
 
-        .header-contact-us-text {
+        .header-contact-us-text, .footer-contact-us-text {
             display: none;
         }
 
@@ -88,11 +88,28 @@ body {
         top: 333px;
     }
 
+    .main-information-purple-ellipse {
+        display: none;
+        width: 51px;
+        height: 51px;
+        
+        background: linear-gradient(219.89deg, #7B65FF 16.2%, #2CBCDB 86.96%);
+    }
+
+    .main-information-green-two-ellipse {
+        display: none;
+        width: 51px;
+        height: 51px;
+
+        background: linear-gradient(219.89deg, #2CDBA6 16.2%, #2CBCDB 86.96%);
+    }
+
     .main-information-title {
         color: $purple-color;
         font-size: 3em;
         font-weight: 900;
         padding-bottom: 6px;
+        position: relative;
     }
 
     .main-information-dash {
@@ -100,6 +117,10 @@ body {
         width: 42px;
         height: 8px;
         border-radius: 22px;
+
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 22px);
     }
 
     .main-information-subtitle {
@@ -142,49 +163,51 @@ body {
         margin-bottom: 50px;
     }
 
-    .advantage-item {
-        margin: 50px 0;
-
-        .advantage-item-title {
-            font-size: 1.5em;
-            font-weight: 800;
-            line-height: 36px;
-            color: $dark-blue-color;
-            margin-bottom: 15px;
-        }
-        
-        .advantage-item-description {
-            font-size: 18px;
-            line-height: 27px;
-            font-family: Raleway-Regular;
-        }
-
-        .advantage-item-img {
-            display: flex;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 30px;
-
-            img {
-                width: 40px;
+    .advantages-items {
+        .advantage-item {
+            margin: 50px 0;
+    
+            .advantage-item-title {
+                font-size: 1.5em;
+                font-weight: 800;
+                line-height: 36px;
+                color: $dark-blue-color;
+                margin-bottom: 15px;
             }
-        }
-
-        .advantage-item-green {
-            background-color: #2CDBA6;
-            box-shadow: 20px 20px 50px rgba(44, 219, 166, 0.35);
-        }
-
-        .advantage-item-red {
-            background-color: #FF6359;
-            box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
-        }
-
-        .advantage-item-purple {
-            background-color: #7B65FF;
-            box-shadow: 20px 20px 50px rgba(123, 101, 255, 0.35);
+            
+            .advantage-item-description {
+                font-size: 18px;
+                line-height: 27px;
+                font-family: Raleway-Regular;
+            }
+    
+            .advantage-item-img {
+                display: flex;
+                justify-content: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-bottom: 30px;
+    
+                img {
+                    width: 40px;
+                }
+            }
+    
+            .advantage-item-green {
+                background-color: #2CDBA6;
+                box-shadow: 20px 20px 50px rgba(44, 219, 166, 0.35);
+            }
+    
+            .advantage-item-red {
+                background-color: #FF6359;
+                box-shadow: 20px 20px 50px rgba(255, 99, 89, 0.35);
+            }
+    
+            .advantage-item-purple {
+                background-color: #7B65FF;
+                box-shadow: 20px 20px 50px rgba(123, 101, 255, 0.35);
+            }
         }
     }
 }
@@ -204,6 +227,21 @@ body {
 
         left: -38px;
         top: 425px;
+    }
+
+    .extra-information-purple-ellipse {
+        display: none;
+        width: 51px;
+        height: 51px;
+
+        background: linear-gradient(219.89deg, #7B65FF 16.2%, #2CBCDB 86.96%);
+    }
+
+    .extra-information-orange-first-ellipse {
+        display: none;
+        width: 139px;
+        height: 139px;
+        background: linear-gradient(219.89deg, #FFBD59 16.2%, #FF5A6D 86.96%);
     }
 
     .extra-information-orange-ellipse {
@@ -266,7 +304,7 @@ body {
     .extra-information-action-button {
         @include action-button;
 
-        margin: 30px 0 50px 0;
+        margin: 30px auto 50px auto;
 
         .extra-information-action-button-text {
             @include action-button-text;
@@ -278,7 +316,8 @@ body {
         justify-content: center;
 
         background: url(assets/img/triangle.svg) -125px -12px no-repeat;
-        width: 100vw;
+        width: calc(100% + 40px);
+        max-width: 405px;
         margin-bottom: 80px;
 
         &:last-child {
@@ -288,6 +327,10 @@ body {
         img {
             position: relative;
             z-index: 5;
+        }
+
+        .extra-information-photo-phones-big, .extra-information-photo-phone-big {
+            display: none;
         }
     }
 }
@@ -342,6 +385,16 @@ body {
         left: 320px;
     }
 
+    .pre-footer-green-two-ellipse {
+        display: none;
+        width: 97px;
+        height: 97px;
+        background: linear-gradient(219.89deg, #5DFECD 16.2%, #2CBCDB 86.96%);
+
+        left: 995px;
+        bottom: 165px;
+    }
+
     .pre-footer-title {
         @include title($white-color);
 
@@ -366,6 +419,281 @@ body {
 
         .pre-footer-action-button-text {
             @include action-button-text;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .advantages-container {
+        .advantages-items {
+            .advantage-item-arrow {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .main-information-container {
+        flex-direction: row;
+        width: 100%;
+        max-width: 1168px;
+
+        .main-information-photo {
+            min-width: 506px;
+            width: 80%;
+            margin-left: 90px;
+        }
+
+        .main-information-text-block {
+            text-align: left;
+        }
+
+        .main-information-action-button {
+            margin: 50px 0;
+        }
+
+        .main-information-dash {
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .main-information-container {
+        margin: 65px 180px;
+
+        .main-information-green-ellipse {
+            left: 350px;
+            top: -95px;
+        }
+
+        .main-information-orange-ellipse {
+            width: 140px;
+            height: 140px;
+
+            left: -250px;
+            top: 560px;
+        }
+
+        .main-information-purple-ellipse {
+            display: block;     
+            right: 590px;
+            top: 420px;
+        }
+
+        .main-information-green-two-ellipse {
+            display: block;
+            right: -123px;
+            top: 510px;
+        }
+    }
+
+    .header-container, .footer-container {
+        margin: 0 40px;
+
+        .header-contact-us, .footer-contact-us {
+            min-width: 180px;
+            align-items: center;
+
+            .header-contact-us-text, .footer-contact-us-text {
+                display: block;
+                color: $dark-blue-color;
+                font-size: 18px;
+                font-weight: 600;
+                font-family: Raleway-Light;
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .footer-container {
+        margin: 0 120px;
+
+        .footer-contact-us {
+            border: 2px solid $dark-blue-color;
+            box-sizing: border-box;
+            box-shadow: none;
+        }
+    }
+
+    .advantages-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 134px 0 178px 0;
+
+        .advantages-title {
+            font-size: 3em;
+            margin-bottom: 150px;
+        }
+
+        .advantages-items {
+            display: flex;
+            flex-direction: row;
+
+            .advantage-item {
+                margin-left: 36px;
+
+                &:first-child, &:last-child {
+                    .advantage-item-images {
+                        .advantage-item-arrow {
+                            align-items: flex-start;
+                        }
+                    }
+                }
+
+                .advantage-item-title, .advantage-item-description {
+                    max-width: 307px;
+                }
+
+                .advantage-item-images {
+                    display: flex;
+
+                    .advantage-item-arrow {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .extra-information-container {
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        margin: 0 180px 20px 180px;
+
+        .extra-information-green-ellipse {
+            width: 49px;
+            height: 49px;
+
+            left: 570px;
+            top: 580px;
+        }
+
+        .extra-information-orange-ellipse {
+            width: 139px;
+            height: 139px;
+
+            left: 265px;
+            top: 100px;
+        }
+
+        .extra-information-purple-ellipse {
+            display: block;
+            left: 1050px;
+            top: 65px;
+        }
+
+        .extra-information-text-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            max-width: 500px;
+            width: 100%;
+            z-index: 5;
+
+            .extra-information-title {
+                margin-bottom: 40px;
+                line-height: 56px;
+            }
+
+            .extra-information-description {
+                margin-bottom: 20px;
+            }
+        }
+
+        .extra-information-title {
+            font-size: 3em;
+        }
+
+        .extra-information-photo {
+            width: 50%;
+            justify-content: flex-start;
+            background: url(assets/img/triangle.svg) -133px 93% no-repeat;
+
+            .extra-information-photo-phones, .extra-information-photo-phone {
+                display: none;
+            }
+
+            .extra-information-photo-phones-big, .extra-information-photo-phone-big {
+                display: block;
+            }
+        }
+    }
+
+    .extra-information-container-reverse {
+        flex-direction: row;
+
+        .extra-information-red-ellipse-two {
+            top: 70px;
+            left: 1100px;
+        }
+
+        .extra-information-green-ellipse-two {
+            left: 610px;
+            top: 390px;
+        }
+
+        .extra-information-text-block {
+            max-width: 540px;
+            width: 100%;
+        }
+
+        .extra-information-photo {
+            justify-content: center;
+            padding-bottom: 100px;
+            background: url(assets/img/triangle-rotate.svg) 50px 158px no-repeat !important;
+        }
+    }
+
+    .pre-footer-container {
+        padding: 190px 0;
+        margin: 205px 120px 124px 120px;
+
+        .pre-footer-red-ellipse {
+            top: 25px;
+            left: 25px;
+        }
+
+        .pre-footer-orange-ellipse {
+            left: 728px;
+        }
+
+        .pre-footer-green-ellipse {
+            left: 196px;
+            bottom: 64px;
+        }
+
+        .pre-footer-red-two-ellipse {
+            width: 80px;
+            height: 80px;
+
+            bottom: -40px;
+            left: 823px;
+        }
+
+        .pre-footer-green-two-ellipse {
+            display: block;
+        }
+
+        .pre-footer-title {
+            font-size: 3em;
+            padding: 0 168px;
+            margin-bottom: 25px;
+        }
+
+        .pre-footer-description {
+            padding: 0 271px;
+            margin-bottom: 20px;
         }
     }
 }

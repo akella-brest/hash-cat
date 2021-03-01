@@ -11,6 +11,7 @@
     border-radius: 47px;
     color: $white-color;
     text-decoration: none;
+    z-index: 10;
 }
 
 @mixin action-button-text {
