@@ -619,6 +619,7 @@ body {
             width: 50%;
             justify-content: flex-start;
             background: url(assets/img/triangle.svg) -133px 93% no-repeat;
+            max-width: none;
 
             .extra-information-photo-phones, .extra-information-photo-phone {
                 display: none;
