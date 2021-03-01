@@ -439,12 +439,6 @@ body {
         width: 100%;
         max-width: 1168px;
 
-        .main-information-photo {
-            min-width: 506px;
-            width: 80%;
-            margin-left: 90px;
-        }
-
         .main-information-text-block {
             text-align: left;
         }
@@ -461,7 +455,7 @@ body {
 
 @media only screen and (min-width: 1440px) {
     .main-information-container {
-        margin: 65px 180px;
+        margin: 65px auto;
 
         .main-information-green-ellipse {
             left: 350px;
@@ -487,6 +481,12 @@ body {
             right: -110px;
             top: 510px;
         }
+
+        .main-information-photo {
+            min-width: 506px;
+            width: 80%;
+            margin-left: 90px;
+        }
     }
 
     .header-container, .footer-container {
@@ -502,6 +502,7 @@ body {
                 font-size: 18px;
                 font-weight: 600;
                 font-family: Raleway-Light;
+                text-decoration: none;
             }
 
             img {
@@ -636,11 +637,11 @@ body {
 
         .extra-information-red-ellipse-two {
             top: 70px;
-            left: 1100px;
+            left: 100%;
         }
 
         .extra-information-green-ellipse-two {
-            left: 610px;
+            left: 57%;
             top: 390px;
         }
 
