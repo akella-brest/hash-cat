@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,23 +11,26 @@
     <title>HashCat</title>
     <!-- Facebook Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '170245881575700');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '170245881575700');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=170245881575700&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=170245881575700&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
     <meta name="facebook-domain-verification" content="nmpdd9qjwzcd7y74kgtcnouv10w0nv" />
 </head>
+
 <body>
     <!-- Header -->
     <section class="header-container">
@@ -91,7 +95,8 @@
                     Upload a photo or enter base Hashtags
                 </div>
                 <div class="advantage-item-description">
-                    Just upload your photo or enter hashtags that best describe your post or business, like #travel or #nycstores.
+                    Just upload your photo or enter hashtags that best describe your post or business, like #travel or
+                    #nycstores.
                 </div>
             </div>
             <div class="advantage-item">
@@ -104,10 +109,11 @@
                     </div>
                 </div>
                 <div class="advantage-item-title">
-                    Generate the best Hashtags group 
+                    Generate the best Hashtags group
                 </div>
                 <div class="advantage-item-description">
-                    Our AI-algorithm will recognize the objects on the photo and suggest relevant Hashtags with the broadest audience coverage.
+                    Our AI-algorithm will recognize the objects on the photo and suggest relevant Hashtags with the
+                    broadest audience coverage.
                 </div>
             </div>
             <div class="advantage-item">
@@ -123,7 +129,8 @@
                     Copy Hashtags to your post
                 </div>
                 <div class="advantage-item-description">
-                    Simply copy these Hashtags to your social media post and wait for new views, likes, comments and followers! 
+                    Simply copy these Hashtags to your social media post and wait for new views, likes, comments and
+                    followers!
                 </div>
             </div>
         </div>
@@ -138,7 +145,8 @@
                 Track your account growth
             </header>
             <div class="extra-information-description">
-                Easily measure the impact of our Hashtags: additional likes, comments and followers we brought to your account!
+                Easily measure the impact of our Hashtags: additional likes, comments and followers we brought to your
+                account!
                 Explore the dynamics of your account in Overtime Analytics.
             </div>
             <a href="https://hashcat.onelink.me/kfWi/e539011a" class="extra-information-action-button">
@@ -150,7 +158,8 @@
         </div>
         <div class="extra-information-photo">
             <img class="extra-information-photo-phones" src="assets/img/phones.svg" alt="phones">
-            <img class="extra-information-photo-phones extra-information-photo-phones-big" src="assets/img/phones-big.svg" alt="phones">
+            <img class="extra-information-photo-phones extra-information-photo-phones-big"
+                src="assets/img/phones-big.svg" alt="phones">
         </div>
         <div class="extra-information-orange-ellipse ellipse"></div>
         <div class="extra-information-red-ellipse ellipse"></div>
@@ -176,7 +185,8 @@
         <div class="extra-information-green-ellipse-two ellipse"></div>
         <div class="extra-information-photo">
             <img class="extra-information-photo-phone" src="assets/img/phone.svg" alt="phone">
-            <img class="extra-information-photo-phone extra-information-photo-phone-big" src="assets/img/phone-big.svg" alt="phone">
+            <img class="extra-information-photo-phone extra-information-photo-phone-big" src="assets/img/phone-big.svg"
+                alt="phone">
         </div>
     </section>
 
@@ -216,20 +226,49 @@
     </section>
 
     <!-- Contact form -->
-    <form class="contact-form-container" id="contact-form">
+    <form class="contact-form-container" id="contact-form" class="myform" action="" method="post">
         <div class="contact-form-title">Contact Support</div>
         <div class="contact-form-cross" onclick="closeContactForm()">
             <img src="./assets/img/cross-icon.svg" alt="cross-icon">
         </div>
         <div class="contact-form-inputs">
             <input type="email" name="email" placeholder="Email Adress">
-            <input type="text" name="description" placeholder="Describe Your Problem">
+            <input type="text" name="message" placeholder="Describe Your Problem">
         </div>
         <div class="contact-form-button-container">
             <button class="contact-form-action-button" type="submit">Submit</button>
         </div>
+        <span class="output_message"></span>
     </form>
 
     <div id="blackout-wrapper"></div>
 </body>
+<script>
+    $(document).ready(function () {
+        $('.myform').on('submit', function () {
+
+            // Add text 'loading...' right after clicking on the submit button. 
+            $('.output_message').text('Loading...');
+
+            var form = $(this);
+            $.ajax({
+                url: "email.php",
+                method: form.attr('method'),
+                data: form.serialize(),
+                success: function (result) {
+                    if (result == 'success') {
+                        $('.output_message').text('Message Sent!');
+                    } else {
+                        $('.output_message').text('Error Sending email!');
+                    }
+                }
+            });
+
+            // Prevents default submission of the form after clicking on the submit button. 
+            return false;
+        });
+    });
+
+</script>
+
 </html>
