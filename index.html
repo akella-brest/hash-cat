@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="icon" type="image/png" href="/favicon.png">
     <title>HashCat</title>
     <!-- Facebook Pixel Code -->
@@ -35,8 +36,8 @@
                 HashCat
             </span>
         </div>
-        <div class="header-contact-us">
-            <a href="#" class="header-contact-us-text">Contact Us</a>
+        <div class="header-contact-us" onclick="openContactForm()">
+            <a class="header-contact-us-text">Contact Us</a>
             <img src="assets/img/contact-us-logo.svg" alt="contact-us-logo">
         </div>
     </section>
@@ -208,10 +209,27 @@
                 HashCat
             </span>
         </div>
-        <div class="footer-contact-us">
-            <a href="#" class="footer-contact-us-text">Contact Us</a>
+        <div class="footer-contact-us" onclick="openContactForm()">
+            <a class="footer-contact-us-text">Contact Us</a>
             <img src="assets/img/contact-us-logo.svg" alt="contact-us-logo">
         </div>
     </section>
+
+    <!-- Contact form -->
+    <form class="contact-form-container" id="contact-form">
+        <div class="contact-form-title">Contact Support</div>
+        <div class="contact-form-cross" onclick="closeContactForm()">
+            <img src="./assets/img/cross-icon.svg" alt="cross-icon">
+        </div>
+        <div class="contact-form-inputs">
+            <input type="email" name="email" placeholder="Email Adress">
+            <input type="text" name="description" placeholder="Describe Your Problem">
+        </div>
+        <div class="contact-form-button-container">
+            <button class="contact-form-action-button" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div id="blackout-wrapper"></div>
 </body>
 </html>
