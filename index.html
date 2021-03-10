@@ -244,32 +244,5 @@
     <div id="blackout-wrapper"></div>
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        $('.myform').on('submit', function () {
-
-            // Add text 'loading...' right after clicking on the submit button. 
-            $('.output_message').text('Loading...');
-
-            var form = $(this);
-            $.ajax({
-                url: "email.php",
-                method: form.attr('method'),
-                data: form.serialize(),
-                success: function (result) {
-                    if (result == 'success') {
-                        $('.output_message').text('Message Sent!');
-                    } else {
-                        $('.output_message').text('Error Sending email!');
-                    }
-                }
-            });
-
-            // Prevents default submission of the form after clicking on the submit button. 
-            return false;
-        });
-    });
-
-</script>
 
 </html>
