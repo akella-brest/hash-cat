@@ -17,6 +17,7 @@ function closeContactForm() {
     
             var form = $(this);
             $.ajax({
+                type: 'POST',
                 url: "email.php",
                 method: form.attr('method'),
                 data: form.serialize(),
