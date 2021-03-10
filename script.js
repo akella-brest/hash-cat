@@ -33,4 +33,4 @@ function closeContactForm() {
             return false;
         });
     });
-})($);
+})(jQuery);
