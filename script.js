@@ -21,11 +21,15 @@ function closeContactForm() {
                 method: form.attr('method'),
                 data: form.serialize(),
                 success: function (result) {
+                    console.log(result);
                     if (result == 'success') {
                         $('.output_message').text('Message Sent!');
                     } else {
                         $('.output_message').text('Error Sending email!');
                     }
+                },
+                error: function (err) {
+                    console.log(err);
                 }
             });
     
